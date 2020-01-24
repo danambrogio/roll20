@@ -2,3 +2,10 @@ name: roll20
 version: "0.1"
 author: Dan Ambrogio <dan.ambrogio@gmail.com>
 about: A CLI tool for simulating dice rolls
+args:
+    - die:
+        help: Specifies what size of die to roll. Defaults to 20.
+        short: d
+        long: die
+        takes_value: true
+    
