@@ -1,4 +1,4 @@
-name: APP_NAME
+name: roll20
 version: "0.1"
 author: Dan Ambrogio <dan.ambrogio@gmail.com>
-about: ABOUT_YOUR_APP
+about: A CLI tool for simulating dice rolls

@@ -1,14 +1,12 @@
-# cli-template
+# roll20
 
-`cli-template` is a template for creating command line interfaces in Rust
+This is a CLI that lets you simlulate dice rolls with common D&D modifiers.
 
 ## Usage
 
-Clone this project, then copy `cli.yml` into `cli.yml` to set up your required command line flags and arguments.
+See `roll20 -h` for usage. Unless I end up putting it here, too.
 
-Once that's done, you can implement everything in `main.rs`.
-
-Make sure to update `Cargo.toml` to set your author name etc.
+## Building
 
 To build your project binaries, use `cargo build --release`. Your binary will be in `/target/release`.
 
