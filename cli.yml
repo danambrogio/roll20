@@ -19,3 +19,15 @@ args:
         long: sum
         requires: 
             - num
+    - advantage:
+        help: Whether you're rolling with advantage. This rolls twice and keeps the higher roll.
+        long: advantage
+        conflicts_with:
+            - num
+            - disadvantage
+    - disadvantage:
+        help: Whether you're rolling with disadvantage. This rolls twice and keeps the lower roll.
+        long: disadvantage
+        conflicts_with:
+            - num
+            - advantage
