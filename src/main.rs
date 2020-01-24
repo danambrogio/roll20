@@ -9,11 +9,19 @@ fn main() {
   let yaml = load_yaml!("../cli.yml");
   let matches = App::from_yaml(yaml).get_matches();
 
-  let die = matches.value_of("die").unwrap_or("20").parse::<i32>().unwrap();
-  let num = matches.value_of("num").unwrap_or("1").parse::<i32>().unwrap();
+  let die_opt = matches.value_of("die").unwrap_or("20").parse::<i32>().unwrap();
+  let num_opt = matches.value_of("num").unwrap_or("1").parse::<i32>().unwrap();
+  let sum_opt = matches.is_present("sum");
 
-  for _ in 0..num {
-    println!("You rolled {}! [0 - {}]", roll(die), die);
+  let mut rolls: Vec<i32> = Vec::new();
+  for _ in 0..num_opt {
+    let result = roll(die_opt);
+    rolls.push(result);
+    println!("You rolled {}! [0 - {}]", result, die_opt);
+  }
+  if sum_opt {
+    println!("---");
+    println!("Total: {}", rolls.iter().sum::<i32>());
   }
 }
 

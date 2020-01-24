@@ -13,3 +13,9 @@ args:
         short: n
         long: number
         takes_value: true
+    - sum:
+        help: Whether the result of all rolls should be summed.
+        short: s
+        long: sum
+        requires: 
+            - num
