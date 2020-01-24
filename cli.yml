@@ -8,4 +8,8 @@ args:
         short: d
         long: die
         takes_value: true
-    
+    - num:
+        help: How many dice to roll. Defaults to 1.
+        short: n
+        long: number
+        takes_value: true
